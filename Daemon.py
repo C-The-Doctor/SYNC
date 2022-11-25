@@ -329,7 +329,7 @@ class DispatchEvents(View):
 
 
 app.add_url_rule('/Auth/', view_func=AuthView.as_view('Auth'))
-app.add_url_rule('/Dashboard/', view_func=HomeView.as_view('Root'))
+app.add_url_rule('/', view_func=HomeView.as_view('Root'))
 app.add_url_rule('/CreateAccount/', view_func=CreatePremierAccount.as_view('CreateAccount'))
 app.add_url_rule('/Dispatch/', view_func=DispatchEvents.as_view('Dispatch'))
 app.add_url_rule('/CreateSink/', view_func=SinkView.as_view('CreateSink'))

@@ -1,0 +1,225 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Forms / Layouts - NiceAdmin Bootstrap Template</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{{url_for('static', filename="Components/assets/img/favicon.png")}}" rel="icon">
+  <link href="{{url_for('static', filename="Components/assets/img/apple-touch-icon.png")}}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{{url_for('static', filename="Components/assets/vendor/bootstrap/css/bootstrap.min.css")}}" rel="stylesheet">
+  <link href="{{url_for('static', filename="Components/assets/vendor/bootstrap-icons/bootstrap-icons.css")}}" rel="stylesheet">
+  <link href="{{url_for('static', filename="Components/assets/vendor/boxicons/css/boxicons.min.css")}}" rel="stylesheet">
+  <link href="{{url_for('static', filename="Components/assets/vendor/quill/quill.snow.css")}}" rel="stylesheet">
+  <link href="{{url_for('static', filename="Components/assets/vendor/quill/quill.bubble.css")}}" rel="stylesheet">
+  <link href="{{url_for('static', filename="Components/assets/vendor/remixicon/remixicon.css")}}" rel="stylesheet">
+  <link href="{{url_for('static', filename="Components/assets/vendor/simple-datatables/style.css")}}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{{url_for('static', filename="Components/assets/css/style.css")}}" rel="stylesheet">
+  <link href="{{url_for('static', filename="Components/assets/css/Navlinks.css")}}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: NiceAdmin - v2.4.0
+  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+
+
+<div class="topnav">
+  <a class="active" href="#home"> Schedules </a>
+  <a href="#news"> Home </a>
+  <a href="#contact"> Dashboard </a>
+    <a href="#contact" style="float:right;"> Back </a>
+</div>
+
+          <div class="card">
+            <div class="card-body">
+               </br>
+
+              <h3 class="card-title" style="font-size:30px;"> Schedule Creation Point </h3>
+             
+            </br>
+              <!-- Multi Columns Form -->
+              <form class="row g-3" action="{{CreateSchedule}}" method="POST">
+                <div class="col-md-12">
+                  <label for="inputName5" class="form-label"> TimeTable Name </label>
+                  <input type="text" class="form-control" id="inputName5" name="Title">
+                </div>
+                <div class="col-md-6">
+                  <label for="inputEmail5" class="form-label"> Affects Course * </label>
+                   <select id="inputState" class="form-select" name="Course">
+                    <option selected>Choose...</option>
+                    <option value="Test1"> Test1</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label for="inputPassword5" class="form-label"> Course Level </label>
+                  <select id="inputState" class="form-select" name="Clevel">
+                    <option selected>Choose...</option>
+                    <option value="Test2"> Test2 </option>
+                  </select>
+                </div>
+                 <div class="col-md-6">
+                  <label for="inputEmail5" class="form-label"> Course Period </label>
+                   <select id="inputState" class="form-select" name="Cperiod">
+                    <option selected>Choose...</option>
+                    <option value="Test3"> Test3 </option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label for="inputPassword5" class="form-label"> Course Admission </label>
+                   <select id="inputState" class="form-select" name="Cadmin">
+                    <option selected>Choose...</option>
+                    <option value="Test4"> Test4 </option>
+                  </select>
+                </div>
+               
+                <div class="col-md-6">
+                  <label for="inputCity" class="form-label"> Effective As From * </label>
+                  <input type="date" class="form-control" id="inputCity" name="Starttime">
+                </div>
+                <div class="col-md-6">
+                  <label for="inputState" class="form-label"> Effective Upto * </label>
+                   <input type="date" class="form-control" id="inputCity" name="Endtime">
+
+                </div>
+                
+                
+                 <div class="col-md-6">
+                  <label for="inputEmail5" class="form-label"> Registered By </label>
+                  <input type="email" class="form-control" id="inputEmail5" name="Creator">
+                </div>
+                <div class="col-md-6">
+                  <label for="inputPassword5" class="form-label"> Response Frequency </label>
+                  <input type="password" class="form-control" id="inputPassword5" name="Frequency">
+                </div>
+                <div class="col-12">
+          </br>
+                </br>
+                     <fieldset class="row mb-3">
+                  <legend class="col-form-label col-sm-2 pt-0"> Active Day Cycle </legend>
+                  <div class="col-sm-10">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="" id="gridRadios1" value="option1" checked>
+                      <label class="form-check-label" for="gridRadios1">
+                        Monday 
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="" id="gridRadios2" value="option2">
+                      <label class="form-check-label" for="gridRadios2">
+                        Tuesday 
+                      </label>
+                    </div>
+                    <div class="form-check disabled">
+                      <input class="form-check-input" type="radio" name="" id="gridRadios3" value="option3">
+                      <label class="form-check-label" for="gridRadios3">
+                        Wednesday
+                      </label>
+                    </div>
+                     <div class="form-check disabled">
+                      <input class="form-check-input" type="radio" name="" id="gridRadios3" value="option3" >
+                      <label class="form-check-label" for="gridRadios3">
+                        Thursday
+                      </label>
+                    </div>
+
+                    
+
+                    <div class="form-check disabled">
+                      <input class="form-check-input" type="radio" name="" id="gridRadios3" value="option3" >
+                      <label class="form-check-label" for="gridRadios3">
+                        Friday
+                      </label>
+                    </div>  
+
+                    <div class="form-check disabled">
+                      <input class="form-check-input" type="radio" name="" id="gridRadios3" value="option3" >
+                      <label class="form-check-label" for="gridRadios3">
+                        Sartuday
+                      </label>
+                    </div>
+
+
+                    <div class="form-check disabled">
+                      <input class="form-check-input" type="radio" name="" id="gridRadios3" value="option3" >
+                      <label class="form-check-label" for="gridRadios3">
+                        Sunday
+                      </label>
+                    </div>
+                  </div>
+
+                </fieldset>
+
+                </div>
+                </br>
+                <div class="col-md-4">
+                  <label for="inputCity" class="form-label"> Lesson Start Time </label>
+                  <input type="time" class="form-select" id="inputCity" name="Lstart">
+                </div>
+                <div class="col-md-4">
+                  <label for="inputState" class="form-label"> Lesson Interval </label>
+                  <input type="text" class="form-control" id="inputCity" name="Linter">
+                </div>
+                <div class="col-md-4">
+                  <label for="inputZip" class="form-label"> Lession End Time  </label>
+                  <input type="time" class="form-select" id="inputZip" name="Lend">
+                </div>
+                </br>
+                </br>
+                <div class="text-center">
+                   </br>
+                </br>
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="reset" class="btn btn-secondary">Reset</button>
+                </div>
+              </form><!-- End Multi Columns Form -->
+
+</br>
+</br>
+             
+</br>
+</br>
+            </div>
+          </div>
+
+        </div>
+
+
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{{url_for('static', filename="Components/assets/vendor/apexcharts/apexcharts.min.js")}}"></script>
+  <script src="{{url_for('static', filename="Components/assets/vendor/bootstrap/js/bootstrap.bundle.min.js")}}"></script>
+  <script src="{{url_for('static', filename="Components/assets/vendor/chart.js/chart.min.js")}}"></script>
+  <script src="{{url_for('static', filename="Components/assets/vendor/echarts/echarts.min.js")}}"></script>
+  <script src="{{url_for('static', filename="Components/assets/vendor/quill/quill.min.js")}}"></script>
+  <script src="{{url_for('static', filename="Components/assets/vendor/simple-datatables/simple-datatables.js")}}"></script>
+  <script src="{{url_for('static', filename="Components/assets/vendor/tinymce/tinymce.min.js")}}"></script>
+  <script src="{{url_for('static', filename="Components/assets/vendor/php-email-form/validate.js")}}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{{url_for('static', filename="Components/assets/js/main.js")}}"></script>
+
+</body>
+
+</html>
